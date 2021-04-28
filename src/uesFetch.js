@@ -12,22 +12,22 @@ const useFetch = (callback, url) => {
     const initialData = [
       {
         title: "공부하기",
-        id: "1233",
+        id: 1233,
         status: "todo",
       },
       {
         title: "스터디준비",
-        id: "1234",
+        id: 1234,
         status: "todo",
       },
       {
         title: "알고리즘공부",
-        id: "1230",
+        id: 1230,
         status: "todo",
       },
       {
         title: "컴퓨터게임",
-        id: "1231",
+        id: 1231,
         status: "todo",
       },
     ];
