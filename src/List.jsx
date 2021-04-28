@@ -1,9 +1,8 @@
-const List = ({todos}) => {
-    const todoList = todos.map(todo=><li>{todo}</li>)
-    return (
-        <ul>
-            {todoList}
-        </ul>
-    )
-}
-export default List
+const List = ({ todos, loading }) => {
+  let todoList = <div>loading...</div>;
+  if (!loading) {
+    todoList = todos.map((todo) => <li key={todo.id}>{todo.title}</li>);
+  }
+  return <ul>{todoList}</ul>;
+};
+export default List;
