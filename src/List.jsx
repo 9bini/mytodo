@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { TodoContext } from "./TodoStore";
 import Item from "./Item";
 
-const List = ({ todos, loading, changeTodoStatus }) => {
+const List = () => {
+  const { todos, loading, changeTodoStatus } = useContext(TodoContext);
   let todoList = <div>loading...</div>;
   if (!loading) {
     todoList = todos.map((todo) => (

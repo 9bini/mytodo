@@ -1,11 +1,17 @@
+import { useContext } from "react";
+import { TodoContext } from "./TodoStore";
 import "./Header.css";
 
-const Header = ({ todos }) => {
+const Header = () => {
+  const { todos } = useContext(TodoContext);
   return (
-    <div>
+    <>
       <h1>Hello TODO 애플리케이션</h1>
-      <div className="countInfo">해야할일 : {todos.length} 개가 있습니다.</div>
-    </div>
+      <div className="countInfo">
+        해야할일 : {todos.filter((todo) => todo.status === "todo").length} 개가
+        있습니다.
+      </div>
+    </>
   );
 };
 
