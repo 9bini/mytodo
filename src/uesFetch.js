@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useFetch = (callback, url) => {
   const [loading, setLoading] = useState(false);
@@ -11,24 +11,24 @@ const useFetch = (callback, url) => {
 
     const initialData = [
       {
-        title: "공부하기",
+        title: '공부하기',
         id: 1233,
-        status: "todo",
+        status: 'todo',
       },
       {
-        title: "스터디준비",
+        title: '스터디준비',
         id: 1234,
-        status: "todo",
+        status: 'todo',
       },
       {
-        title: "알고리즘공부",
+        title: '알고리즘공부',
         id: 1230,
-        status: "todo",
+        status: 'todo',
       },
       {
-        title: "컴퓨터게임",
+        title: '컴퓨터게임',
         id: 1231,
-        status: "todo",
+        status: 'todo',
       },
     ];
 

@@ -1,12 +1,14 @@
-import React from "react";
-import "./Item.css";
-const Item = ({ todo, changeTodoStatus }) => {
+import { useContext } from 'react';
+import { TodoContext } from './TodoStore';
+import './Item.css';
+const Item = ({ todo }) => {
+  const { dispatch } = useContext(TodoContext);
   const toggleItem = (e) => {
     const id = e.target.dataset.id;
-    changeTodoStatus(id);
+    dispatch({ type: 'CHANGE_TODO_STATUS', payload: id });
   };
 
-  const itemClassName = todo.status === "done" ? "done" : "";
+  const itemClassName = todo.status === 'done' ? 'done' : '';
 
   return (
     <li data-id={todo.id} onClick={toggleItem} className={itemClassName}>
